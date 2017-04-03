@@ -1,0 +1,52 @@
+Test cases:
+
+input: 
+"0700"
+output :
+octal 0700
+
+input: 
+"31"
+output  :
+decimal 31
+
+input: 
+"0xf 0xF"
+output: 
+hex 0xf
+hex 0xF
+
+input: 
+"0.2 0.2e-2 0.3e2"
+output:
+float 0.2
+float 0.2e-2
+float 0.3e2
+
+input: 
+"0.5x 0 hi"
+output:
+float 0.5
+invalid [0x78]
+zero 0
+invalid [0x68]
+invalid [0x69]
+
+input:
+"0.z 07692 5eg"
+output:
+mal .
+invalid [0x7a]
+octal 076
+decimal 92
+decimal 5
+invalid [0x65]
+invalid [0x67]
+
+input: 
+"1.2e+9 %s0.5"
+output:
+float 1.2e+9
+invalid [0x25]
+invalid [0x73]
+float 0.5
